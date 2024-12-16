@@ -314,7 +314,7 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num > 0 && (num & (num - 1)) === 0;
+  return num > 0 && Math.log2(num) % 1 === 0;
 }
 
 /**
@@ -422,7 +422,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  return typeof number === 'number' && !isNaN(number);
+  return typeof number === 'number' && !Number.isNaN(number);
 }
 
 /**
